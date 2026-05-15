@@ -42,9 +42,9 @@ A full-stack real-time chat application where users can register, log in, and co
 | TypeScript       | Type safety                 |
 | Tailwind CSS     | Styling                     |
 | Zustand          | Global state management     |
-| Socket.IO Client | Real-time communication     |
+| Socket.IO frontend | Real-time communication     |
 | Axios            | HTTP requests               |
-| React Router DOM | Client-side routing         |
+| React Router DOM | frontend-side routing         |
 | React Toastify   | Toast notifications         |
 | React Icons      | Icon library                |
 
@@ -52,7 +52,7 @@ A full-stack real-time chat application where users can register, log in, and co
 
 | Technology           | Purpose                       |
 | -------------------- | ----------------------------- |
-| Node.js + Express.js | Server framework              |
+| Node.js + Express.js | backend framework              |
 | TypeScript           | Type safety                   |
 | MongoDB + Mongoose   | Database and ODM              |
 | Socket.IO            | Real-time WebSocket events    |
@@ -64,20 +64,20 @@ A full-stack real-time chat application where users can register, log in, and co
 
 ## Environment Variables
 
-### Frontend — `client/.env`
+### Frontend — `frontend/.env`
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 VITE_SOCKET_URL=http://localhost:5000
 ```
 
-### Backend — `server/.env`
+### Backend — `backend/.env`
 
 ```env
 PORT=5000
 MONGO_URL=mongodb://localhost:27017/NexChat
 JWT_SECRET=your_jwt_secret_key_here
-CLIENT_URL=http://localhost:5173
+frontend_URL=http://localhost:5173
 ```
 
 ---
@@ -100,7 +100,7 @@ cd NexChat
 ### 2. Setup the backend
 
 ```bash
-cd server
+cd backend
 npm install
 cp .env.example .env
 # Fill in your values in .env
@@ -110,7 +110,7 @@ npm run dev
 ### 3. Setup the frontend
 
 ```bash
-cd client
+cd frontend
 npm install
 cp .env.example .env
 # Fill in your values in .env
@@ -130,18 +130,17 @@ http://localhost:5173
 ### Frontend
 
 ```bash
-cd client
+cd frontend
 npm run build
-# Output in dist/ folder — deploy to Vercel or Netlify
 ```
 
 ### Backend
 
 ```bash
-cd server
+cd backend
 npm run build
 npm start
-# Output in dist/ folder — deploy to Render or Railway
+
 ```
 
 ---
@@ -171,13 +170,13 @@ npm start
 
 ## Socket.IO Events
 
-### Client → Server
+### frontend → backend
 
 | Event         | Payload               | Description        |
 | ------------- | --------------------- | ------------------ |
 | `sendMessage` | `{ message: string }` | Send a new message |
 
-### Server → Client
+### backend → frontend
 
 | Event            | Payload                                             | Description                          |
 | ---------------- | --------------------------------------------------- | ------------------------------------ |
