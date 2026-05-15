@@ -29,7 +29,6 @@ A full-stack real-time chat application where users can register, log in, and co
 - 🚪 Protected routes — unauthenticated users redirected to login
 - 📜 Chat history loaded from MongoDB on page refresh
 - ✅ Input validation with Zod on the backend
-- 🐳 Dockerized backend for consistent environments
 
 ---
 
@@ -60,8 +59,7 @@ A full-stack real-time chat application where users can register, log in, and co
 | JSON Web Token (JWT) | Authentication                |
 | bcryptjs             | Password hashing              |
 | Zod                  | Request validation            |
-| Redis (optional)     | Session management            |
-| Docker               | Containerization              |
+| Redis (optional)     | Session management            |          
 | cookie-parser        | HTTP-only cookie handling     |
 | cors                 | Cross-origin resource sharing |
 
@@ -127,8 +125,6 @@ http://localhost:5173
 ```
 
 ---
-
-## Running with Docker (Backend)
 
 ## Production Build
 
