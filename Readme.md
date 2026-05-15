@@ -58,8 +58,7 @@ A full-stack real-time chat application where users can register, log in, and co
 | Socket.IO            | Real-time WebSocket events    |
 | JSON Web Token (JWT) | Authentication                |
 | bcryptjs             | Password hashing              |
-| Zod                  | Request validation            |
-| Redis (optional)     | Session management            |          
+| Zod                  | Request validation            |                    
 | cookie-parser        | HTTP-only cookie handling     |
 | cors                 | Cross-origin resource sharing |
 
